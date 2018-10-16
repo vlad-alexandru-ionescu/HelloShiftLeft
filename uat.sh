@@ -6,3 +6,4 @@ curl http://localhost:8081/patients
 curl http://localhost:8081/account
 curl http://localhost:8081/account/1
 sleep 20
+# test
