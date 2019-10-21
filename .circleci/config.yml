@@ -5,7 +5,7 @@
 version: 2.1
 
 orbs:
-  shiftleft-analyze: shiftleft/analyze@dev:first
+  shiftleft-analyze: shiftleft/analyze@dev:second
 
 jobs:
   build:
