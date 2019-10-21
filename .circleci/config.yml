@@ -2,7 +2,11 @@
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
-version: 2
+version: 2.1
+
+orbs:
+  shiftleft-analyze: shiftleft/analyze@dev:first
+
 jobs:
   build:
     docker:
@@ -22,9 +26,9 @@ jobs:
     
     steps:
       - checkout
-      # Install SL agent
+      # Install ShiftLeft CLI
       - run: 
-          name: Install Shiftleft agent!
+          name: Install Shiftleft CLI
           command: curl https://www.shiftleft.io/download/sl-latest-linux-x64.tar.gz > /tmp/sl.tar.gz && sudo tar -C /usr/local/bin -xzf /tmp/sl.tar.gz
           
       # Download and cache dependencies
@@ -53,9 +57,9 @@ jobs:
             source $BASH_ENV
       
       # Analyze for security!
-      - run: 
-          name: Analyze for security bugs
-          command: sl analyze --wait --app $APP_NAME target/hello-shiftleft-0.0.1.jar
+      - shiftleft-analyze/analyze:
+          app: $APP_NAME
+          target: target/hello-shiftleft-0.0.1.jar
           
      #  Prioritize security bugs!!
       - run: 
