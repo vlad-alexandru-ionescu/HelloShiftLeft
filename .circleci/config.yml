@@ -5,7 +5,7 @@
 version: 2.1
 
 orbs:
-  shiftleft-analyze: shiftleft/analyze@dev:second
+  shiftleft-analyze: shiftleft/analyze@dev:3
 
 jobs:
   build:
@@ -27,9 +27,9 @@ jobs:
     steps:
       - checkout
       # Install ShiftLeft CLI
-      - run: 
-          name: Install Shiftleft CLI
-          command: curl https://www.shiftleft.io/download/sl-latest-linux-x64.tar.gz > /tmp/sl.tar.gz && sudo tar -C /usr/local/bin -xzf /tmp/sl.tar.gz
+      # - run: 
+      #     name: Install Shiftleft CLI
+      #     command: curl https://www.shiftleft.io/download/sl-latest-linux-x64.tar.gz > /tmp/sl.tar.gz && sudo tar -C /usr/local/bin -xzf /tmp/sl.tar.gz
           
       # Download and cache dependencies
       - restore_cache:
