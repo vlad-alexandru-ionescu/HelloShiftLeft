@@ -5,7 +5,7 @@
 version: 2.1
 
 orbs:
-  shiftleft-analyze: shiftleft/analyze@dev:4
+  shiftleft: shiftleft/shiftleft@dev:1
 
 jobs:
   build:
@@ -57,7 +57,7 @@ jobs:
             source $BASH_ENV
       
       # Analyze for security!
-      - shiftleft-analyze/analyze:
+      - shiftleft/analyze:
           app: $APP_NAME
           target: target/hello-shiftleft-0.0.1.jar
           
