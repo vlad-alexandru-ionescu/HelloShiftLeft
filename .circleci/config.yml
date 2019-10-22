@@ -5,7 +5,7 @@
 version: 2.1
 
 orbs:
-  shiftleft: shiftleft/shiftleft@vlad/branch-awareness
+  shiftleft: shiftleft/shiftleft@dev:vlad/branch-awareness
 
 jobs:
   build:
