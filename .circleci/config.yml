@@ -5,7 +5,7 @@
 version: 2.1
 
 orbs:
-  shiftleft: shiftleft/shiftleft@dev:1
+  shiftleft: shiftleft/shiftleft@dev:2
 
 jobs:
   build:
@@ -60,6 +60,8 @@ jobs:
       - shiftleft/analyze:
           app: $APP_NAME
           target: target/hello-shiftleft-0.0.1.jar
+          wait: true
+          language: java
           
      #  Prioritize security bugs!!
       - run: 
