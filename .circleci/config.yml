@@ -5,7 +5,7 @@
 version: 2.1
 
 orbs:
-  shiftleft: shiftleft/shiftleft@dev:vlad/work
+  shiftleft: shiftleft/shiftleft@0.0.1
 
 jobs:
   build:
