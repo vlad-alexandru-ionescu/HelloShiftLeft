@@ -5,7 +5,7 @@
 version: 2.1
 
 orbs:
-  shiftleft: shiftleft/shiftleft@0.0.3
+  shiftleft: shiftleft/shiftleft@1.0
 
 jobs:
   build:
